@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Shop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400, 500, 700display=swapsubset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+</head>
+<body>
+   <div class="main">
+    <!-- Header  -->
+        <div class="header">
+            <div class="grid wide">
+                <div class="navbar hide-on-mobile-tablet">
+                    <ul class="nav__list">
+                        <li class="nav__list-item split-separation">Vào cửa hàng trên ứng dụng Shop</li>
+                        <li class="nav__list-item split-separation">Tải ứng dụng</li>
+                        <li class="nav__list-item">
+                            Kết nối
+                        <a href="https://www.facebook.com/" class="nav__list-icon-link">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="nav__list-icon-link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        </li>
+                    </ul>
+                    <ul class="nav__list">
+                        <li class="nav__list-item nav__list-item--open-notify">
+                            <a href="" class="nav__list-item-link">
+                                <i class="fa-regular fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="nav__notify">
+                                <div class="nav__notify-header">
+                                    <h3 class="nav__notify-new">Thông báo mới</h3>
+                                </div>
+                                <ul class="nav__notify-list">
+                                    <li class="nav__notify-item">
+                                        <a href="" class="nav__notify-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="nav__notify-img">
+                                            <div class="nav__notify-info">
+                                                <span class="nav__notify-name">Đồng hồ Casio chính hãng</span>
+                                                <span class="nav__notify-describe">Siêu sale duy nhất 3 ngày 27-30/6/2023</span>
+                                                
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav__notify-item nav__notify-item--viewed">
+                                        <a href="" class="nav__notify-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="nav__notify-img">
+                                            <div class="nav__notify-info">
+                                                <span class="nav__notify-name">Đồng hồ Casio chính hãng</span>
+                                                <span class="nav__notify-describe">Siêu sale duy nhất 3 ngày 27-30/6/2023</span>
+                                                
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav__notify-item">
+                                        <a href="" class="nav__notify-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="nav__notify-img">
+                                            <div class="nav__notify-info">
+                                                <span class="nav__notify-name">Đồng hồ Casio chính hãng</span>
+                                                <span class="nav__notify-describe">Siêu sale duy nhất 3 ngày 27-30/6/2023</span>
+                                                
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="nav__notify-footer">
+                                    <a href="" class="nav__notify-footer--btn">Xem tất cả</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav__list-item">
+                            <a href="" class="nav__list-item-link">
+                                <i class="fa-regular fa-circle-question"></i>
+                                Hỗ trợ
+                            </a>
+                        </li>
+                        <!-- <li class="nav__list-item bold__strong split-separation">Đăng ký</li>
+                        <li class="nav__list-item bold__strong">Đăng nhập</li> -->
+                        <li class="nav__list-item nav__list-user">
+                            <img src="https://png.pngtree.com/png-vector/20190919/ourlarge/pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1742031.jpg" alt="" class="nav__list-user-avatar">
+                            <span class="nav__list-user-name">Nguyễn Văn Hải</span>
+
+                            <ul class="nav__list-user-menu">
+                                <li class="nav__list-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="nav__list-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="nav__list-user-item">
+                                    <a href="">Đơn mua</a>
+                                </li>
+                                <li class="nav__list-user-item nav__list-user-item--saperate">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+    <!-- Header-with-search -->
+                <div class="header-with-search">
+                    <label for="mobile-search-check" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+
+                    <div class="header--logo hide-on-tablet">
+                        <a href="index.html" class="header--logo-link">
+                            <img src="./assets/img/Logo.jpg" alt="" class="img--logo">
+                        </a>
+                    </div>
+
+                    <input type="checkbox" hidden id="mobile-search-check" class="header__search-check">
+
+                    <div class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                        
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <div class="header__search-history">
+                            <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                            <ul class="header__search-history-list">
+                                <li class="header__search-history-item">
+                                    <a href="">Đồng hồ rolex</a>
+                                </li>
+                                <li class="header__search-history-item">
+                                    <a href="">Đồng hồ casio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+    <!-- Cart layout -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice">3</span>
+
+                            <!-- No cart : header__cart-list--no-cart -->
+                            <div class="header__cart-list">
+                                <img src="./assets/img/no-cart.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">
+                                    Chưa có sản phẩm
+                                </span>
+
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <!-- cart item -->
+                                    <li class="header__cart-item">
+                                        <img src="data:image/jpeg;base64,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" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Đồng hồ Casio black Đồng hồ Casio black Đồng hồ Casio black Đồng hồ Casio black Đồng hồ Casio black Đồng hồ Casio black</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-plice">3.000.000</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Xám
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="data:image/jpeg;base64,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" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Đồng hồ Casio black</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-plice">3.000.000</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Xám
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="data:image/jpeg;base64,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" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Đồng hồ Casio black</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-plice">3.000.000</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Xám
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="header__cart-viewcart btn btn--primary">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item-active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
+        </div>
+
+    <!-- Container           Grid -> Grod_row -> Column -->
+        <div class="app__container">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fa fa-list"></i>
+                                DANH MỤC
+                            </h3>
+                            
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">Sản phẩm</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ chính hãng</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ chính hãng</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">Đồng hồ chính hãng</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn btn--home-filter">Phổ biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                            <button class="home-filter__btn btn btn--home-filter">Bán chạy</button>
+
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                
+                                
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: thấp đến cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: cao đến thấp</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-curent">1</span>/14
+                                </span>
+
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
+                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ thông minh chính hãng</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+
+                        <div class="home-product">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4">
+                                    <a class="home-product-item" href="#">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/affc6cab4f2f456da0bba2b24ecce3b2);"></div>
+                                        <h4 class="home-product-item__name">Đồng Hồ Casio Nam Dây Cao Su STANDARD F-94WA-9DG Chính Hãng</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">3.200.000đ</span>
+                                            <span class="home-product-item__price-current">2.999.999đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10 đã bán</div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Casio</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale">
+                                            <span class="home-product-item__sale-percent">10%</span>
+                                            <span class="home-product-item__sale-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                               
+
+                            </div>
+                        </div>
+
+                        <ul class="pagination product-pagination">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">14</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Footer -->
+        <div class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2-4 m-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Trung tâp trợ giúp</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">HomeShop Mall</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Giới thiệu</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Đồng hồ</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">Túi sách</a>
+                            </li>
+                            <li class="footer__item">    
+                                <a href="" class="footer__item-link">Quần áo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4">
+                        <h3 class="footer__heading">Theo dõi</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">
+                                    <i class="footer__item-icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">
+                                    <i class="footer__item-icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__item-link">
+                                    <i class="footer__item-icon fab fa-linkedin"></i>
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472" alt="Download QR" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="" class="footer__download-app-link">
+                                    <img src="https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163" alt="App store" class="footer__download-apps-icon download-apps-icon-store">
+                                </a>
+                                <a href="" class="footer__download-app-link">
+                                    <img src="https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def" alt="Google play" class="footer__download-apps-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="footer__bottom">
+                <div class="grid wide">
+                    <p class="footer__text">© 2020 - Bản quyền thuộc về Công ty TNHH HTHC</p>
+                </div>
+            </div>
+        </div>
+
+   </div>
+   <!-- Modal -->
+   <!-- <div class="modal">
+        <div class="modal__overlay"></div>
+
+        <div class="modal__body"> -->
+            <!-- Register form -->
+            <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__swith-btn">Đăng nhập</span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Số điện thoại">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy">
+                            Bằng việc đăng kí, bạn đã đồng ý với Shop Home về
+                            <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a> & 
+                            <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>
+                        </p>
+
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÍ</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials-fa btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                        Kết nối Facebook
+                    </a>
+                    <a href="" class="auth-form__socials-go btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                        Kết nối Google
+                    </a>
+                </div>
+            </div> -->
+
+             <!-- Login form -->
+             <!-- <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__swith-btn">Đăng ký</span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Số điện thoại">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                        </div>
+                        
+                    </div>
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                            <span class="auth-form__help-separate"></span>
+                            <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                        </div>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials-fa btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                        Kết nối Facebook
+                    </a>
+                    <a href="" class="auth-form__socials-go btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                        Kết nối Google
+                    </a>
+                </div>
+            </div>  -->
+
+           
+        <!-- </div> -->
+
+   </div>
+</body>
+</html>
